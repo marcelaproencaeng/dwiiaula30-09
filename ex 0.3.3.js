@@ -1,7 +1,3 @@
-// run `node index.js` in the terminal
-
-console.log(`Hello Node.js v${process.versions.node}!`);
-
 const medicos = [
   {
     nome: 'Leticia',
@@ -21,13 +17,16 @@ const medicos = [
 ];
 const medicosNaoBinarios = medicos.forEach((medico) => {
   if (medico.genero === 'nao-binario') {
-    const apresentacao = ' Dr (e) Noah Lutus ';
+    const apresentacao = `Dr (e) ${medico.nome} ${medico.sobrenome}`;
+
     console.log(apresentacao);
   } else if (medico.genero === 'masculino') {
-    const apresentacao = ' Dr. Adimaldo Pinto ';
+    const apresentacao = `Dr. ${medico.nome} ${medico.sobrenome}`;
+
     console.log(apresentacao);
   } else {
-    const apresentacao = ' Dr (a) Leticia Costana';
+    const apresentacao = `Dr(a) ${medico.nome} ${medico.sobrenome}`;
+
     console.log(apresentacao);
   }
 });
